@@ -26,9 +26,6 @@
         16 // J 左クリック
         17 // K 左クリック
         18 // L 左クリック
-        20 // Z Shift
-        30 // Control
-        32 // Alt
     >;
 };
 
@@ -49,6 +46,24 @@
             track-remainders;
         };
     };
+    /* --------------------------------------------------------------------
+     * ロータリーエンコーダーの物理定義を追加
+     * -------------------------------------------------------------------- */
+    left_encoder: encoder_left {
+        compatible = "alps,ec11";
+        /* FrostOrthoの標準的なピン（D4, D5）を指定 */
+        a-gpios = <&xiao_d 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        b-gpios = <&xiao_d 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        steps = <80>;
+        status = "okay";
+    };
+
+    /* センサーをZMKに認識させるための登録 */
+    sensors: sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder>;
+        triggers-per-rotation = <20>;
+    };
 };
 
 / {
@@ -60,7 +75,7 @@
         // input-processors = <&mouse_runtime_input_processor>;
         input-processors = <
             &mouse_runtime_input_processor
-            &zip_temp_layer 6 100000 // AMLレイヤー、タイムアウト時間
+            &zip_temp_layer 6 1000 // AMLレイヤー、タイムアウト時間
             &zip_xy_scaler 2 3 // カーソル移動量2/3倍
             &zip_xy_transform INPUT_TRANSFORM_Y_INVERT // カーソルの移動方向調整
         >;
@@ -74,8 +89,8 @@
             // &scroll_runtime_input_processor
             &zip_scroll_transform (INPUT_TRANSFORM_X_INVERT) // スクロール方向調整
             &zip_xy_to_scroll_mapper
-            &zip_scroll_x_scaler 0 3 // X軸スクロール量0/3倍
-            &zip_scroll_y_scaler 2 3 // Y軸スクロール量2/3倍
+            &zip_scroll_x_scaler 1 20 // X軸スクロール量1/20倍
+            &zip_scroll_y_scaler 1 20 // Y軸スクロール量1/20倍
         >;
     };
     scroller_x {
@@ -83,8 +98,8 @@
         input-processors = <
             &zip_scroll_transform (INPUT_TRANSFORM_X_INVERT) // スクロール方向調整
             &zip_xy_to_scroll_mapper
-            &zip_scroll_x_scaler 2 3 // X軸スクロール量2/3倍
-            &zip_scroll_y_scaler 0 3 // Y軸スクロール量0/3倍
+            &zip_scroll_x_scaler 1 16 // X軸スクロール量1/16倍
+            &zip_scroll_y_scaler 1 16 // Y軸スクロール量1/16倍
         >;
     };
 };
@@ -126,5 +141,3 @@
         // scroll-layers = <5>;
     };
 };
-
-
