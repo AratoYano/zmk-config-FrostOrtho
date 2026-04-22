@@ -273,7 +273,7 @@
             bindings = <&kp LC(LEFT_ARROW)>;
             key-positions = <11 12>;
         };
-a
+
         combo_window_switcher {
             timeout-ms = <50>;
             key-positions = <10 11>; 
