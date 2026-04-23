@@ -222,6 +222,19 @@
                 <&macro_release>,
                 <&kp LALT>;
         };
+
+        Raycast: Raycast {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp LEFT_GUI>,
+                <&macro_tap>,
+                <&kp SPACE>;
+
+            label = "RAYCAST";
+        };
     };
 
     combos {
@@ -329,10 +342,10 @@
 
         layer_3 {
             bindings = <
-&kp ESC            &kp LG(N2)            &kp LG(N3)             &kp LG(N7)                &kp LG(LS(N4))                                    &window_slide  &window_slide2          &kp UP         &kp LG(N0)               &kp BSPC
-&kp TAB            &kp LG(LA(NUMBER_2))  &kp LG(LA(NUMBER_3))   &kp LG(LA(N7))            &kp LG(LS(N5))                                    &kp LG(EQUAL)  &kp LEFT                &kp DOWN       &kp RIGHT                &kp C_VOL_UP
-&kp LG(LA(LC(F)))  &trans                &kp LG(LS(LA(LC(C))))  &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))                         &kp LG(MINUS)  &kp LA(LC(LEFT_ARROW))  &kp LA(LC(R))  &kp LA(LC(RIGHT_ARROW))  &kp C_VOL_DN
-&trans             &trans                &trans                 &kp LG(LEFT_BRACKET)      &kp LG(RIGHT_BRACKET)      &kp LA(LC(SPACE))      &trans         &trans                  &trans         &trans                   &trans
+&kp ESC            &kp LG(N2)            &kp LG(N3)             &kp LG(N7)                &kp LG(LS(N4))                           &window_slide  &window_slide2          &kp UP         &kp LG(N0)               &kp BSPC
+&kp TAB            &kp LG(LA(NUMBER_2))  &kp LG(LA(NUMBER_3))   &kp LG(LA(N7))            &kp LG(LS(N5))                           &kp LG(EQUAL)  &kp LEFT                &kp DOWN       &kp RIGHT                &kp C_VOL_UP
+&kp LG(LA(LC(F)))  &trans                &kp LG(LS(LA(LC(C))))  &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))                &kp LG(MINUS)  &kp LA(LC(LEFT_ARROW))  &kp LA(LC(R))  &kp LA(LC(RIGHT_ARROW))  &kp C_VOL_DN
+&trans             &trans                &trans                 &kp LG(LEFT_BRACKET)      &kp LG(RIGHT_BRACKET)      &Raycast      &trans         &trans                  &trans         &trans                   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
