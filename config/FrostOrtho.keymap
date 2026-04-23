@@ -226,14 +226,12 @@
         Raycast: Raycast {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp LEFT_GUI>,
-                <&macro_tap>,
-                <&kp SPACE>;
-
-            label = "RAYCAST";
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&macro_press &kp LALT &kp LCMD>
+                , <&macro_tap &kp SPACE>
+                , <&macro_release &kp LALT &kp LCMD>;
         };
     };
 
