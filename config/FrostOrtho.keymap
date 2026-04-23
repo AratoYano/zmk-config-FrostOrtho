@@ -228,10 +228,13 @@
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
-            bindings
-                = <&macro_press &kp LALT &kp LCMD>
-                , <&macro_tap &kp SPACE>
-                , <&macro_release &kp LALT &kp LCMD>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT &kp LCMD>,
+                <&macro_tap>,
+                <&kp SPACE>,
+                <&macro_release>,
+                <&kp LALT &kp LCMD>;
         };
     };
 
@@ -291,7 +294,7 @@
 
         combo_window_switcher {
             timeout-ms = <50>;
-            key-positions = <10 11>;
+            key-positions = <1 2>;
             bindings = <&alt_tab_stay>;
         };
 
@@ -331,19 +334,21 @@
 
         layer_2 {
             bindings = <
-&kp EXCL              &kp AT                &kp HASH              &kp BSLH              &kp PRCNT                         &kp ASTRK  &num_7     &num_8  &num_9  &kp EQUAL
-&kp CARET             &trans                &trans                &trans                &kp AMPERSAND                     &kp PLUS   &num_4     &num_5  &num_6  &kp KP_SLASH
+&kp EXCL              &kp AT                &kp HASH              &kp LG(LS(NUMBER_4))  &kp LG(LS(N5))                    &kp ASTRK  &num_7     &num_8  &num_9  &kp EQUAL
+&kp CARET             &kp BSLH              &kp PERCENT           &kp AMPERSAND         &kp F12                           &kp PLUS   &num_4     &num_5  &num_6  &kp KP_SLASH
 &kp LA(LG(NUMBER_1))  &kp LA(LG(NUMBER_2))  &kp LA(LG(NUMBER_3))  &kp LA(LG(NUMBER_4))  &kp LA(LG(NUMBER_6))              &kp MINUS  &num_1     &num_2  &num_3  &kp DOT
 &trans                &trans                &trans                &trans                &trans                &trans      &num_0     &kp COMMA  &trans  &trans  &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
         layer_3 {
             bindings = <
-&kp ESC            &kp LG(N2)            &kp LG(N3)             &kp LG(N7)                &kp LG(LS(N4))                           &window_slide  &window_slide2          &kp UP         &kp LG(N0)               &kp BSPC
-&kp TAB            &kp LG(LA(NUMBER_2))  &kp LG(LA(NUMBER_3))   &kp LG(LA(N7))            &kp LG(LS(N5))                           &kp LG(EQUAL)  &kp LEFT                &kp DOWN       &kp RIGHT                &kp C_VOL_UP
-&kp LG(LA(LC(F)))  &trans                &kp LG(LS(LA(LC(C))))  &kp LG(LS(LEFT_BRACKET))  &kp LG(LS(RIGHT_BRACKET))                &kp LG(MINUS)  &kp LA(LC(LEFT_ARROW))  &kp LA(LC(R))  &kp LA(LC(RIGHT_ARROW))  &kp C_VOL_DN
-&trans             &trans                &trans                 &kp LG(LEFT_BRACKET)      &kp LG(RIGHT_BRACKET)      &Raycast      &trans         &trans                  &trans         &trans                   &trans
+&kp ESC            &kp LG(N2)            &kp LG(N3)             &kp LG(N7)            &kp LG(LS(LEFT_BRACKET))               &window_slide  &window_slide2          &kp UP         &kp LG(N0)               &kp BSPC
+&kp TAB            &kp LG(LA(NUMBER_2))  &kp LG(LA(NUMBER_3))   &kp LG(LA(N7))        &kp LG(LS(RIGHT_BRACKET))              &kp LG(EQUAL)  &kp LEFT                &kp DOWN       &kp RIGHT                &kp C_VOL_UP
+&kp LG(LA(LC(F)))  &trans                &kp LG(LS(LA(LC(C))))  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)                  &kp LG(MINUS)  &kp LA(LC(LEFT_ARROW))  &kp LA(LC(R))  &kp LA(LC(RIGHT_ARROW))  &kp C_VOL_DN
+&trans             &trans                &trans                 &trans                &Raycast                   &trans      &trans         &trans                  &trans         &trans                   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
