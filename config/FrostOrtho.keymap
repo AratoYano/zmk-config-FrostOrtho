@@ -85,21 +85,21 @@
         myKakko1: myKakko1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LPAR &kp RPAR &kp LEFT>;
+            bindings = <&kp LPAR &kp RPAR>;
             label = "MACRO_PAREN";
         };
 
         myKakko2: myKakko2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LBKT &kp RBKT &kp LEFT>;
+            bindings = <&kp LBKT &kp RBKT>;
             label = "MACRO_BRACKET";
         };
 
         myKakko3: myKakko3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DQT &kp DQT &kp LEFT>;
+            bindings = <&kp DQT &kp DQT>;
             label = "MACRO_DQT";
         };
 
@@ -236,6 +236,13 @@
                 <&macro_release>,
                 <&kp LALT &kp LCMD>;
         };
+
+        my_comma: my_comma {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANG2 &kp COMMA>;
+            label = "MY_COMMA";
+        };
     };
 
     combos {
@@ -334,10 +341,10 @@
 
         layer_2 {
             bindings = <
-&kp EXCL              &kp AT                &kp HASH              &kp LG(LS(NUMBER_4))  &kp LG(LS(N5))                    &kp ASTRK  &num_7     &num_8  &num_9  &kp EQUAL
-&kp CARET             &kp BSLH              &kp PERCENT           &kp AMPERSAND         &kp F12                           &kp PLUS   &num_4     &num_5  &num_6  &kp KP_SLASH
-&kp LA(LG(NUMBER_1))  &kp LA(LG(NUMBER_2))  &kp LA(LG(NUMBER_3))  &kp LA(LG(NUMBER_4))  &kp LA(LG(NUMBER_6))              &kp MINUS  &num_1     &num_2  &num_3  &kp DOT
-&trans                &trans                &trans                &trans                &trans                &trans      &num_0     &kp COMMA  &trans  &trans  &trans
+&kp EXCL              &kp AT                &kp HASH              &kp LG(LS(NUMBER_4))  &kp LG(LS(N5))                    &kp ASTRK  &kp N7     &kp N8  &kp N9        &kp EQUAL
+&kp CARET             &kp BSLH              &kp PERCENT           &kp AMPERSAND         &kp F12                           &kp PLUS   &kp N4     &kp N5  &kp NUMBER_6  &kp KP_SLASH
+&kp LA(LG(NUMBER_1))  &kp LA(LG(NUMBER_2))  &kp LA(LG(NUMBER_3))  &kp LA(LG(NUMBER_4))  &kp LA(LG(NUMBER_6))              &kp MINUS  &kp N1     &kp N2  &kp N3        &kp DOT
+&trans                &trans                &trans                &trans                &trans                &trans      &kp N0     &my_comma  &trans  &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
