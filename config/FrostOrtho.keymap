@@ -341,10 +341,10 @@
 
         layer_2 {
             bindings = <
-&kp EXCL              &kp AT                &kp HASH              &kp LG(LS(NUMBER_4))  &kp LG(LS(N5))                    &kp ASTRK     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL
-&kp CARET             &kp BSLH              &kp PERCENT           &kp AMPERSAND         &kp F12                           &kp PLUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_SLASH
-&kp LA(LG(NUMBER_1))  &kp LA(LG(NUMBER_2))  &kp LA(LG(NUMBER_3))  &kp LA(LG(NUMBER_4))  &kp LA(LG(NUMBER_6))              &kp MINUS     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOT
-&trans                &trans                &trans                &trans                &trans                &trans      &kp NUMBER_0  &my_comma     &trans        &trans        &trans
+&kp EXCL              &kp AT                &kp HASH              &kp LG(LS(NUMBER_4))  &kp LG(LS(N5))                    &kp KP_ASTERISK  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_EQUAL
+&kp CARET             &kp BSLH              &kp PERCENT           &kp AMPERSAND         &kp F12                           &kp KP_PLUS      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_SLASH
+&kp LA(LG(NUMBER_1))  &kp LA(LG(NUMBER_2))  &kp LA(LG(NUMBER_3))  &kp LA(LG(NUMBER_4))  &kp LA(LG(NUMBER_6))              &kp KP_MINUS     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT
+&trans                &trans                &trans                &trans                &trans                &trans      &kp KP_NUMBER_0  &my_comma        &trans           &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
