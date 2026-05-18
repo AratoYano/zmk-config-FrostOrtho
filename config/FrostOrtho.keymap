@@ -301,13 +301,13 @@
 
         combo_window_switcher {
             timeout-ms = <50>;
-            key-positions = <1 2>;
+            key-positions = <>;
             bindings = <&alt_tab_stay>;
         };
 
         mission_control {
             bindings = <&kp LC(UP_ARROW)>;
-            key-positions = <2 3>;
+            key-positions = <>;
         };
 
         app_window {
