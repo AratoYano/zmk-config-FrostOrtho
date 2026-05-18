@@ -21,7 +21,7 @@ manifest:
       revision: main
     - name: zmk-rgbled-widget
       url: https://github.com/cormoran/zmk-rgbled-widget
-      revision: v0.3.0
+      revision: main  # もし v0.3.0 で弾かれた場合は、開発の主軸である main または master を指定します
     # DYA Studio モジュール
     - name: zmk-module-ble-management
       remote: cormoran
