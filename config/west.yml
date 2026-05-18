@@ -17,7 +17,7 @@ manifest:
       revision: v0.3-branch+dya
       import: app/west.yml
     - name: zmk-driver-paw3222
-      remote: sekigon-gonnoc22
+      remote: sekigon-gonnoc
       revision: main
     - name: zmk-rgbled-widget
       remote: caksoylar
