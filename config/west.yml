@@ -3,9 +3,9 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     - name: caksoylar
-      url-base: https://github.com/inorichi
+      url-base: https://github.com/caksoylar
     - name: sekigon-gonnoc  # PAW3222
-      url-base: https://github.com/inorichi
+      url-base: https://github.com/sekigon-gonnoc
     - name: cormoran
       url-base: https://github.com/cormoran
   projects:
@@ -17,8 +17,11 @@ manifest:
       revision: v0.3-branch+dya
       import: app/west.yml
     - name: zmk-driver-paw3222
-      url: https://github.com/sekigon-gonnoc/zmk-driver-paw3222
+      remote: sekigon-gonnoc22
       revision: main
+    - name: zmk-rgbled-widget
+      remote: caksoylar
+      revision: v0.3.0
     # DYA Studio モジュール
     - name: zmk-module-ble-management
       remote: cormoran
