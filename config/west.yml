@@ -19,9 +19,6 @@ manifest:
     - name: zmk-driver-paw3222
       url: https://github.com/sekigon-gonnoc/zmk-driver-paw3222
       revision: main
-    - name: zmk-rgbled-widget
-      url: https://github.com/cormoran/zmk-rgbled-widget
-      revision: main  # もし v0.3.0 で弾かれた場合は、開発の主軸である main または master を指定します
     # DYA Studio モジュール
     - name: zmk-module-ble-management
       remote: cormoran
