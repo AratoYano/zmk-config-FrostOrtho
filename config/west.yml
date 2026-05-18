@@ -17,10 +17,10 @@ manifest:
       revision: v0.3-branch+dya
       import: app/west.yml
     - name: zmk-driver-paw3222
-      remote: sekigon-gonnoc
+      url: https://github.com/sekigon-gonnoc/zmk-driver-paw3222
       revision: main
     - name: zmk-rgbled-widget
-      remote: caksoylar
+      url: https://github.com/cormoran/zmk-rgbled-widget
       revision: v0.3.0
     # DYA Studio モジュール
     - name: zmk-module-ble-management
