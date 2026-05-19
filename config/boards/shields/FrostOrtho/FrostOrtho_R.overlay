@@ -58,7 +58,7 @@
             &mouse_runtime_input_processor
             &zip_temp_layer 6 1000 // AMLレイヤー、タイムアウト時間
             &zip_xy_scaler 2 3 // カーソル移動量2/3倍
-            // &zip_xy_transform INPUT_TRANSFORM_X_INVERT // カーソルの移動方向調整
+            &zip_xy_transform INPUT_TRANSFORM_X_INVERT // カーソルの移動方向調整
             &zip_xy_transform INPUT_TRANSFORM_Y_INVERT // カーソルの移動方向調整
         >;
     };
@@ -69,7 +69,7 @@
         layers = <5>; // 縦スクロールレイヤー
         input-processors = <
             // &scroll_runtime_input_processor
-            &zip_scroll_transform (INPUT_TRANSFORM_X_INVERT) // スクロール方向調整
+            // &zip_scroll_transform (INPUT_TRANSFORM_X_INVERT) // スクロール方向調整
             &zip_xy_to_scroll_mapper
             &zip_scroll_x_scaler 1 20 // X軸スクロール量1/20倍
             &zip_scroll_y_scaler 1 20 // Y軸スクロール量1/20倍
