@@ -23,9 +23,8 @@
 &zip_temp_layer {
     require-prior-idle-ms = <400>;
     excluded-positions = <
-        16 // J 左クリック
-        17 // K 中クリック
-        18 // L 右クリック
+        5 // Y 左クリック
+        7 // I 右クリック
     >;
 };
 
