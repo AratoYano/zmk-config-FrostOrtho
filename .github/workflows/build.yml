@@ -12,7 +12,3 @@ on:
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3.0
-    # ⭕ 【修正箇所】ここから下を追加します
-    with:
-      # ⭕ 「cmake-args」が公式の正しい引数名です。これでコンパイラへフラグを強制注入します。
-      cmake-args: "-DZEPHYR_EXTRA_CFLAGS=\"-Wno-error=return-type -Wno-error=implicit-function-declaration -Wno-error=argument-mismatch -Wno-argument-mismatch\""
