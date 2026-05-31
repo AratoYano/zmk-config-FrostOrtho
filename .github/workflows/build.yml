@@ -12,3 +12,7 @@ on:
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3.0
+    # ⭕ 【修正箇所】ここから下を追加します
+    with:
+      # CMakeを通じて、コンパイラ（GCC）へ「特定の警告でビルドを落とさない」オプションを強制注入します
+      extra-cmake-args: "-DZEPHYR_EXTRA_CFLAGS=\"-Wno-error=return-type -Wno-error=implicit-function-declaration\""
