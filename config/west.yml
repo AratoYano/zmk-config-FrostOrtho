@@ -14,7 +14,7 @@ manifest:
     #   revision: v0.3.0
     - name: zmk
       remote: cormoran
-      revision: v0.3-branch+dya
+      revision: 4493783ef88ce2e653bf8217c92ee17140df71e3
       import: app/west.yml
     - name: zmk-driver-paw3222
       remote: sekigon-gonnoc
