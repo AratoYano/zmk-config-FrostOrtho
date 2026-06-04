@@ -327,7 +327,7 @@
 &kp LEFT_SHIFT      &mo 1  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE      &lt 3 SPACE    &lt 2 MINUS  &mo 4  &trans     &kp ESC
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         layer_1 {
